@@ -1,0 +1,12 @@
+From: Sarah B
+To: Delivery Team
+Subject: Sandbox delay
+Message: The vendor did not deliver the sandbox. This puts the ETL timeline at risk.
+
+From: Tom R
+To: Sarah B
+Message: They need two more days. This affects integration testing.
+
+From: Delivery Manager
+To: Team
+Message: Log this as a risk. I will escalate today.

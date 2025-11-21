@@ -1,0 +1,5 @@
+Risk ID,Description,Impact,Likelihood,Mitigation,Owner,Status
+R001,Integration work may slip due to missing data attributes,High,Medium,Align with data owner. Validate early.,Data Lead,Open
+R002,Security review backlog may block release,High,Medium,Escalate to security manager.,Delivery Manager,Open
+R003,Vendor may miss sandbox deadlines again,Medium,High,Contract enforcement. Daily check-ins.,Vendor Manager,Open
+R004,Rising UAT defects may slow release,Medium,Medium,Increase triage frequency.,QA Lead,Open
