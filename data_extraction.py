@@ -30,5 +30,25 @@ if __name__ == '__main__':
     # pull text from pdf
 
     # pull text from word doc (DOCX)
+from docx import Document
+
+def extract_text_from_word_doc(document_path):
+
+    docx_dict = {}
+
+
+    document = Document(document_path)
+    indx=0
+    for para in document.paragraphs:
+        indx+=1
+        if (len(para.text)>0):
+            print("\n paragraph", indx, "is")
+            print(para.text)
+            docx_dict[indx] = para.text
+    return docx_dict
+
+extract_text_from_word_doc('Risk Sentra/DATA/pwc_sample_data.docx')
+    
+
 
     # pull text from plain text or email file
