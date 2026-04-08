@@ -4,15 +4,15 @@
 - [X] Create an AWS S3 bucket for the project
 - [X] Create a clean folder structure inside the bucket
 - [x] Decide final naming convention for all synthetic artefacts
-- [ ] Rename files so every document has a unique document ID
-- [ ] Upload all synthetic artefacts to S3
-- [ ] Create a master index file for all uploaded documents
+- [X] Rename files so every document has a unique document ID
+- [X] Upload all synthetic artefacts to S3
+- [X] Create a master index file for all uploaded documents
 - [ ] Add metadata fields we want to track for each document
 - [ ] Verify all files are visible in S3 and correctly grouped
 - [ ] Take screenshots of the bucket, folders, and uploaded files for the dissertation
 
 ## Phase 2 - Ground truth and benchmark prep
-- [ ] Finalise the answer key / ground truth for each document
+- [X] Finalise the answer key / ground truth for each document
 - [ ] Make sure each answer key includes expected risks
 - [ ] Label each risk as explicit or implicit
 - [ ] Map each risk to the T1 to T10 taxonomy
