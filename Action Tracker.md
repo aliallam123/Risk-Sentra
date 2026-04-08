@@ -2,7 +2,7 @@
 
 ## Phase 1 - S3 upload and document organisation
 - [X] Create an AWS S3 bucket for the project
-- [ ] Create a clean folder structure inside the bucket
+- [ X] Create a clean folder structure inside the bucket
 - [ ] Decide final naming convention for all synthetic artefacts
 - [ ] Rename files so every document has a unique document ID
 - [ ] Upload all synthetic artefacts to S3
