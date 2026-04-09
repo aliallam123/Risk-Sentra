@@ -7,7 +7,7 @@
 - [X] Rename files so every document has a unique document ID
 - [X] Upload all synthetic artefacts to S3
 - [X] Create a master index file for all uploaded documents
-- [ ] Add metadata fields we want to track for each document
+- [X] Add metadata fields we want to track for each document
 - [ ] Verify all files are visible in S3 and correctly grouped
 - [ ] Take screenshots of the bucket, folders, and uploaded files for the dissertation
 
