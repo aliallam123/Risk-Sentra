@@ -1,25 +1,29 @@
-Ground truth for the **Business Case** contains **8 risks (BC-01 → BC-08)**. 
+Comparison with the **Business Case ground truth**:
 
-Your model output extracted **2 risks**.
+Ground truth contains **8 risks (BC-01 → BC-08)**. 
 
 ---
 
 # Correct matches
 
-| Model Risk                | Ground Truth |
-| ------------------------- | ------------ |
-| Integration scope creep   | ✔ BC-03      |
-| Data migration complexity | ✔ BC-04      |
+| Model Output                               | Ground Truth                                  |
+| ------------------------------------------ | --------------------------------------------- |
+| Integration complexity higher than planned | ✔ BC-03 Integration scope creep               |
+| Delay in Finance Detailed Design recovery  | ✔ BC-05 Finance DD delay                      |
+| Consumption of management reserve          | ✔ BC-01 Management reserve depletion          |
+| Scope growth beyond the current plan       | ✔ BC-07 Assumption of no further scope growth |
 
-**Correct = 2**
+**Correct = 4**
 
 ---
 
 # False positives
 
-None.
+| Model Output                      | Reason                            |
+| --------------------------------- | --------------------------------- |
+| Resource shortfall in the program | Not in Business Case ground truth |
 
-**False = 0**
+**False = 1**
 
 ---
 
@@ -27,45 +31,41 @@ None.
 
 Ground truth risks not detected:
 
-* BC-01 Management reserve depletion before Month 24
 * BC-02 SI forecast exceeds baseline by £800k
-* BC-05 Finance DD delay compresses schedule
-* BC-06 Benefits realisation plan not baselined
-* BC-07 Assumption of no further scope growth may prove invalid
+* BC-04 Data migration complexity threatens benefits realisation
+* BC-06 Benefits realisation plan not formally baselined
 * BC-08 Over-optimistic payback period
 
-**Missing = 6**
+**Missing = 4**
 
 ---
 
-# Evaluation row (Experiment 2 – Haiku)
+# Experiment 2 results (No Retrieval)
 
 | Document      | True | Extracted | Correct | Missing | False |
 | ------------- | ---- | --------- | ------- | ------- | ----- |
-| Business Case | 8    | 2         | 2       | 6       | 0     |
+| Business Case | 8    | 5         | 4       | 4       | 1     |
 
 ---
 
 # Metrics
 
 Precision
-2 / 2 = **1.00**
+4 / 5 = **0.80**
 
 Recall
-2 / 8 = **0.25**
+4 / 8 = **0.50**
 
 F1
-≈ **0.40**
+≈ **0.62**
 
 ---
 
-# What this tells you
+# Important insight for your dissertation
 
-Claude Haiku is:
+Compared to your **Experiment 1 baseline**, the model:
 
-* **very precise**
-* but **missing most risks**
+* detected **more risks**
+* but introduced **hallucination**
 
-Meaning it only detects **very obvious risks**.
-
-This becomes useful later when you compare it with **Claude Sonnet**, which should detect more **implicit risks**.
+This supports your methodology hypothesis that **removing retrieval increases noise and reduces precision**.
